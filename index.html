@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML form project</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="container my-5 border">
+    <form class="row g-3">
+      <div class="col-12 p-1 mx-0 bg-light">
+        <h4>Payment form example</h4>
+      </div>
+      <div class="col-12">
+        <div class="alert alert-danger ms-3 pt-2 pb-2 text-danger-emphasis">
+          <h6><small>Some fields are missing</small></h6>
+        </div>
+      </div>
+      <!---credit card number-->
+      <div class="col-md-5">
+        <label for="card#" class="form-label">Card #</label>
+        <input type="text" class="form-control" id="card#" size="16" maxlength="16" placeholder="xxxxxxxxxxxxxxxx"
+          required>
+      </div>
+      <div class="col-md-3">
+        <label for="cvc#" class="form-label">CVC# #</label>
+        <input type="text" class="form-control" id="cvc#" size="3" maxlength="3" placeholder="000" required>
+      </div>
+      <div class="col-md-4">
+        <label for="ammount" class="form-label">Amount</label>
+        <div class="input-group mb-3">
+          <span class="input-group-number">$ </span>
+          <input type="text" class="form-control" id="ammount" placeholder="Amount"
+            aria-label="Amount (to the nearest dollar)">
+        </div>
+      </div>
+      <!--Nombre-->
+      <div class="col-md-6">
+        <label for="fname" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="fname" placeholder="John" required>
+      </div>
+      <div class="col-md-6">
+        <label for="lname" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lname" placeholder="Smith" required>
+      </div>
+      <!--adress-->
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">City</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="col-md-3">
+        <label for="inputState" class="form-label">State</label>
+        <select id="inputState" class="form-select">
+          <option selected>Pick a state</option>
+          <option>NY</option>
+          <option>CA</option>
+          <option>DC</option>
+          <option>VA</option>
+          <option>PA</option>
+          <option>NJ</option>
+          <option>FL</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label for="inputZip" class="form-label">Postal Code</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div>
+      <!--select creditcard /message-->
+      <div class="col-md-6">
+        <h6>We accept</h6>
+        <div class="d-inline-block bg-secondary p-1 rounded">
+          <input class="form-check-input ms-1" type="radio" name="ccard" id="mastercard">
+          <label class="form-check-label" for="mastercard"><i class="fa-brands fa-cc-mastercard"></i>
+          </label>
+          <input class="form-check-input ms-1" type="radio" name="ccard" id="visa">
+          <label class="form-check-label" for="visa"><i class="fa-brands fa-cc-visa"></i></label>
+          <input class="form-check-input ms-1" type="radio" name="ccard" id="diners">
+          <label class="form-check-label" for="diners"><i class="fa-brands fa-cc-diners-club"></i>
+          </label>
+          <input class="form-check-input ms-1" type="radio" name="ccard" id="amexpress">
+          <label class=" form-check-label" for="amexpress"><i class="fa-brands fa-cc-amex"></i>
+          </label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" rows="3"></textarea>
+        <p><small>Add any message here</small></p>
+      </div>
+      <div class="col-12 border bg-light d-flex justify-content-end p-2 m-0 ">
+        <input class="btn btn-primary btn-sm m-1" type="reset" value="cancel">
+        <input class="btn btn-primary btn-sm m-1" type="submit" value="send">
+
+      </div>
+    </form>
+  </div>
+
+</html>
